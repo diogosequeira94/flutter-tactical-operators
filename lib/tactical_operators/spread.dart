@@ -15,6 +15,7 @@ List<int> joinCollectionsWithSpread() {
 }
 
 class MySpreadWidget extends StatelessWidget {
+  /// Spread operator in this case adds new elements to an already existing collection
   final showLoginUI = true;
   @override
   Widget build(BuildContext context) {
