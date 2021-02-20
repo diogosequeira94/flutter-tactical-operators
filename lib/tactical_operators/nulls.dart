@@ -52,7 +52,12 @@ void access() {
   print(initializedValue?.toUpperCase()); // Will print SOMETHING.
 }
 
-void spread() {}
+void spread() {
+  List<int> collection;
+  final otherCollection = [4, 5, 6];
+  final result = [...?collection, ...?otherCollection];
+  print(result); // Will not longer throw exceptions
+}
 
 class MyNullWidget extends StatelessWidget {
   @override
