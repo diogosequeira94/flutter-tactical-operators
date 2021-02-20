@@ -15,8 +15,26 @@ List<int> joinCollectionsWithSpread() {
 }
 
 class MySpreadWidget extends StatelessWidget {
+  final showLoginUI = true;
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return ListView(
+      children: [
+        Text('Fake email input'),
+        Text('Fake password input'),
+        if (showLoginUI) ...[
+          RaisedButton(
+            child: Text('Login'),
+            onPressed: () {},
+          ),
+          FlatButton(
+            child: Text('Forgotten Password'),
+            onPressed: () {},
+          ),
+        ],
+        if (!showLoginUI)
+          RaisedButton(child: Text('Register'), onPressed: () {}),
+      ],
+    );
   }
 }
